@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Academia Journey</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f7f9fa; }
+    header { background: #1d3557; color: #fff; padding: 1rem 2rem; }
+    nav { margin: 1rem 0; }
+    nav button { background: #457b9d; color: #fff; border: none; padding: 0.7rem 1.2rem; margin: 0 0.3rem; cursor: pointer; border-radius: 5px; }
+    nav button.active { background: #e63946; }
+    section { display: none; padding: 2rem; background: #fff; margin: 2rem auto; max-width: 750px; border-radius: 8px; box-shadow: 0 4px 24px rgba(0,0,0,0.06);}
+    section.active { display: block; }
+    h2 { color: #1d3557; }
+    footer { background: #f1faee; padding: 1rem 2rem; color: #555; text-align: center; font-size: 0.98rem; }
+    .logo { font-size: 1.8rem; font-weight: bold; letter-spacing: 1px; }
+    .monogram { background: #457b9d; color: #fff; border-radius: 50%; padding: 0.2em 0.5em; font-size: 1.1em; margin-right: 8px; }
+    input, select, textarea { width: 100%; padding: 0.7rem; margin: 0.5rem 0 1.5rem 0; border-radius: 5px; border: 1px solid #ccc; }
+    button[type="submit"] { background: #e63946; color: #fff; border: none; padding: 0.7rem 1.5rem; border-radius: 5px; cursor: pointer; }
+    .announcement { background: #f9c74f; padding: 0.5em 1em; border-radius: 5px; margin-bottom: 0.6em; }
+    .file-list { list-style: none; padding: 0; }
+    .file-list li { margin-bottom: 0.5em; }
+  </style>
+</head>
+<body>
+  <header>
+    <span class="logo"><span class="monogram">AJ</span> The Academia Journey</span>
+    <nav>
+      <button onclick="showSection('home')" id="btn-home">Home</button>
+      <button onclick="showSection('handbook')" id="btn-handbook">Scenario Handbook</button>
+      <button onclick="showSection('notes')" id="btn-notes">Notes</button>
+      <button onclick="showSection('registration')" id="btn-registration">Register & Feedback</button>
+      <button onclick="showSection('teacher')" id="btn-teacher">Speak with a Teacher</button>
+      <button onclick="showSection('announcements')" id="btn-announcements">Announcements</button>
+      <button onclick="showSection('timetable')" id="btn-timetable">Timetable Uploads</button>
+      <button onclick="showSection('chat')" id="btn-chat">Ask a Teacher</button>
+    </nav>
+  </header>
+
+  <section id="home" class="active">
+    <h2>Welcome to The Academia Journey</h2>
+    <p>
+      Your all-in-one educational hub for secondary school learners. Access notes, past papers, expert support, and interactive learning tools focused on UNEB and beyond.
+    </p>
+    <ul>
+      <li>Centralized resources and study materials</li>
+      <li>Talk directly with professional teachers</li>
+      <li>Announcements and live updates</li>
+      <li>Easy registration and feedback</li>
+    </ul>
+  </section>
+
+  <section id="handbook">
+    <h2>Scenario Handbook</h2>
+    <p>Links to real-life application scenarios by subject and topic. Download files as needed.</p>
+    <ul class="file-list">
+      <li><b>Biology:</b> <a href="#">Human Digestive System (PDF)</a></li>
+      <li><b>Physics:</b> <a href="#">Force & Motion (DOCX)</a></li>
+      <li><b>Mathematics:</b> <a href="#">Algebra Scenarios (PDF)</a></li>
+      <!-- Add more as needed -->
+    </ul>
+  </section>
+
+  <section id="notes">
+    <h2>Notes</h2>
+    <p>Explore detailed notes for each subject. Search and download material.</p>
+    <select>
+      <option>Biology</option>
+      <option>Chemistry</option>
+      <option>Physics</option>
+      <option>Mathematics</option>
+      <option>ICT</option>
+      <option>English</option>
+      <option>Geography</option>
+      <option>History</option>
+      <option>Entrepreneurship</option>
+      <option>Agriculture</option>
+      <option>Physical Education</option>
+    </select>
+    <ul class="file-list">
+      <li><a href="#">Topic 1: Cell Structure (PDF)</a></li>
+      <li><a href="#">Topic 2: Chemical Reactions (PDF)</a></li>
+      <!-- Add more as needed -->
+    </ul>
+  </section>
+
+  <section id="registration">
+    <h2>Registration Form</h2>
+    <form id="registrationForm">
+      <input type="text" placeholder="Name" required />
+      <input type="text" placeholder="Class" required />
+      <input type="email" placeholder="Email" required />
+      <label>Subject Interests:</label>
+      <select multiple>
+        <option>Biology</option>
+        <option>Chemistry</option>
+        <option>Physics</option>
+        <option>Mathematics</option>
+        <option>ICT</option>
+        <!-- Add more as needed -->
+      </select>
+      <button type="submit">Register</button>
+    </form>
+    <h2>Feedback Form</h2>
+    <form id="feedbackForm">
+      <textarea placeholder="Your feedback, suggestion, or complaint" required></textarea>
+      <button type="submit">Submit Feedback</button>
+    </form>
+  </section>
+
+  <section id="teacher">
+    <h2>Speak with a Professional Teacher</h2>
+    <p><b>Contact:</b></p>
+    <ul>
+      <li><b>Email:</b> <a href="mailto:musamuslim994@gmail.com">musamuslim994@gmail.com</a></li>
+      <li><b>WhatsApp:</b> <a href="https://wa.me/256705954597">+256705954597</a></li>
+    </ul>
+    <h3>Professional Profiles</h3>
+    <ul>
+      <li>Mr. Musa - Mathematics, Physics</li>
+      <li>Ms. Jane - Biology, Chemistry</li>
+      <!-- Add more -->
+    </ul>
+    <h3>Live Consultation</h3>
+    <p>Schedule a live Q&A session with our teachers. <em>(Feature coming soon)</em></p>
+  </section>
+
+  <section id="announcements">
+    <h2>Announcements & Updates</h2>
+    <div class="announcement">UNEB exam timetables are now available for download!</div>
+    <div class="announcement">New Physics notes just uploaded.</div>
+    <!-- More announcements -->
+  </section>
+
+  <section id="timetable">
+    <h2>Timetable Uploads</h2>
+    <p>Download weekly study guides and exam plans.</p>
+    <ul class="file-list">
+      <li><a href="#">Week 1 Study Guide (PDF)</a></li>
+      <li><a href="#">UNEB Exam Plan (PDF)</a></li>
+      <!-- Add more -->
+    </ul>
+    <h3>Upload Your Timetable</h3>
+    <form>
+      <input type="file" />
+      <button type="submit">Upload</button>
+    </form>
+  </section>
+
+  <section id="chat">
+    <h2>Ask a Teacher</h2>
+    <form id="chatForm">
+      <input type="text" placeholder="Type your question..." required />
+      <button type="submit">Send</button>
+    </form>
+    <div id="chatMessages">
+      <p><em>Chat with a teacher (coming soon)</em></p>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Academia Journey | © Liverton Codes | Musa Made. <br/>
+    Developer contact: WhatsApp <a href="https://wa.me/256705954597">+256705954597</a> |
+    <a href="mailto:musamuslim994@gmail.com">musamuslim994@gmail.com</a>
+  </footer>
+
+  <script>
+    // Navigation
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      document.querySelectorAll('nav button').forEach(btn => btn.classList.remove('active'));
+      document.getElementById('btn-' + id).classList.add('active');
+    }
+    // Registration form handler (basic placeholder)
+    document.getElementById('registrationForm').onsubmit = function(e){
+      e.preventDefault();
+      alert('Registration submitted! (You can connect this to Firebase.)');
+      this.reset();
+    };
+    // Feedback form handler
+    document.getElementById('feedbackForm').onsubmit = function(e){
+      e.preventDefault();
+      alert('Feedback submitted! (You can connect this to Firebase.)');
+      this.reset();
+    };
+    // Chat form handler
+    document.getElementById('chatForm').onsubmit = function(e){
+      e.preventDefault();
+      let msg = this.querySelector('input').value;
+      let chatBox = document.getElementById('chatMessages');
+      let p = document.createElement('p');
+      p.textContent = "You: " + msg;
+      chatBox.appendChild(p);
+      this.reset();
+    };
+    // Timetable upload handler (placeholder)
+    document.querySelector('#timetable form').onsubmit = function(e){
+      e.preventDefault();
+      alert('Timetable uploaded! (You can connect this to Firebase Storage.)');
+      this.reset();
+    };
+    // Set default nav button as active on load
+    document.getElementById('btn-home').classList.add('active');
+  </script>
+</body>
+</html>
